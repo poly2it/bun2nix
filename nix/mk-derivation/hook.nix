@@ -33,11 +33,13 @@ in
           bunDefaultInstallFlags =
             if pkgs.stdenv.hostPlatform.isDarwin then
               [
+                "--frozen-lockfile"
                 "--linker=isolated"
                 "--backend=symlink"
               ]
             else
               [
+                "--frozen-lockfile"
                 "--linker=isolated"
               ];
         };
